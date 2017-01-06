@@ -1,6 +1,6 @@
-# aviation-cessna172-weight-balance-diagrams
+# aviation-cessna172-diagrams
 
-Diagrams for Weight and Balance for the Cessna 172 aircraft in aviation
+Diagrams for the Cessna 172 aircraft in aviation
 
 ----
 
