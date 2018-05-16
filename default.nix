@@ -19,22 +19,22 @@ let
     aviation-units = pkgs.fetchFromGitHub {
       owner = "data61";
       repo = "aviation-units";
-      rev = "c67a8ed7af0218316a308abbbfa804b896319956";
-      sha256 = "0jhhc4q2p7kg07bl7hk0571rp8k5qg02mgnfy0cm51hj5fd2lihx";
+      rev = "aee9b5c37946acfa28dc8ce96bf71643e01f28c7";
+      sha256 = "0kyqn2mn5yvjngqzapqgidvpj5r664i5afkbj0di0hp2nj7f58ac";
     };
 
     aviation-weight-balance = pkgs.fetchFromGitHub {
       owner = "data61";
       repo = "aviation-weight-balance";
-      rev = "04f2d82df78d3981539470988124bdfe5454884c";
-      sha256 = "1s2ncg4k07i9wriq7qr5vjzmagyzjz1mcscwdi99f450bvmlc8nh";
+      rev = "00c65b36ff350b6577bf0f815bd902f820a4bbf0";
+      sha256 = "0sxz247qwjmmkpwjc5221jsph3vbcpgjf93sdcqnnk7r8hlbxj9h";
     };
 
     aviation-cessna172-weight-balance = pkgs.fetchFromGitHub {
       owner = "data61";
       repo = "aviation-cessna172-weight-balance";
-      rev = "2cecf44cec04f23a88c088ef2451d334c30c4fb0";
-      sha256 = "1if7sjgz0cjwypiawaya2r1skx3rcq5a99k31ka52g4m9x4kib0j";
+      rev = "69b0ed0817f2971f0feca730fbdb5ea08da90f40";
+      sha256 = "0mqfqqx6h5g9fmgyg8dhjf6f6vw1w7am2y4f9mz8r55ls026faf2";
     };
 
   };
