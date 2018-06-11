@@ -5,7 +5,7 @@ let
   inherit (nixpkgs) pkgs;
 
   haskellPackages = if compiler == "default"
-                       then pkgs.haskellPackages
+                       then pkgs.haskell.packages.ghc7103
                        else pkgs.haskell.packages.${compiler};
 
   sources = {
@@ -37,6 +37,13 @@ let
       sha256 = "0mqfqqx6h5g9fmgyg8dhjf6f6vw1w7am2y4f9mz8r55ls026faf2";
     };
 
+    intervals = pkgs.fetchFromGitHub {
+      owner = "ekmett";
+      repo = "intervals";
+      rev = "5307fb058cd6135101612ea7e3be7cf56be2c583";
+      sha256 = "16d7b3xans494lgyvjz42gljpjr49r01nm45kl74p3spsp1pv9kv";
+    };
+
   };
 
   modifiedHaskellPackages = haskellPackages.override {
@@ -45,6 +52,7 @@ let
       aviation-weight-balance = import sources.aviation-weight-balance {};
       aviation-cessna172-weight-balance = import sources.aviation-cessna172-weight-balance {};
       parsers = pkgs.haskell.lib.dontCheck super.parsers;        
+      intervals = super.callCabal2nix "intervals" "${sources.intervals}" {};
     };
   };
 

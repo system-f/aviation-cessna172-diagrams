@@ -40,7 +40,6 @@ library
                     , diagrams-lib >= 1.4 && < 2
                     , mtl >= 2.2 && < 3
                     , plots >= 0.1 && < 1
-                    , hgeometry >= 0.6.0.0 && < 0.7
                     , colour >= 2.3 && < 3
 
   ghc-options:
