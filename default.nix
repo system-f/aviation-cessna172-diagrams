@@ -62,9 +62,9 @@ let
 
   modifiedHaskellPackages = haskellPackages.override {
     overrides = self: super: import sources.papa self // {
-      aviation-units = pkgs.haskell.lib.dontHaddock ( import sources.aviation-units {});
-      aviation-weight-balance = pkgs.haskell.lib.dontHaddock ( import sources.aviation-weight-balance {});
-      aviation-cessna172-weight-balance = pkgs.haskell.lib.dontHaddock ( import sources.aviation-cessna172-weight-balance {});
+      aviation-units = super.callCabal2nix "aviation-units" "${sources.aviation-units}" {};
+      aviation-weight-balance = super.callCabal2nix "aviation-weight-balance" "${sources.aviation-weight-balance}" {};
+      aviation-cessna172-weight-balance = super.callCabal2nix "aviation-cessna172-weight-balance" "${sources.aviation-cessna172-weight-balance}" {};
       parsers = pkgs.haskell.lib.dontCheck super.parsers;        
       intervals = super.callCabal2nix "intervals" "${sources.intervals}" {};
       hgeometry = pkgs.haskell.lib.dontCheck (super.callCabal2nix "hgeometry" "${sources.hgeometry}" {});
