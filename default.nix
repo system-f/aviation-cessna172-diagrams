@@ -62,9 +62,9 @@ let
 
   modifiedHaskellPackages = haskellPackages.override {
     overrides = self: super: import sources.papa self // {
-      aviation-units = import sources.aviation-units {};
-      aviation-weight-balance = import sources.aviation-weight-balance {};
-      aviation-cessna172-weight-balance = import sources.aviation-cessna172-weight-balance {};
+      aviation-units = pkgs.haskell.lib.dontHaddock ( import sources.aviation-units {});
+      aviation-weight-balance = pkgs.haskell.lib.dontHaddock ( import sources.aviation-weight-balance {});
+      aviation-cessna172-weight-balance = pkgs.haskell.lib.dontHaddock ( import sources.aviation-cessna172-weight-balance {});
       parsers = pkgs.haskell.lib.dontCheck super.parsers;        
       intervals = super.callCabal2nix "intervals" "${sources.intervals}" {};
       hgeometry = pkgs.haskell.lib.dontCheck (super.callCabal2nix "hgeometry" "${sources.hgeometry}" {});
@@ -74,8 +74,9 @@ let
       th-desugar = self.callHackage "th-desugar" "1.6" {};
       fixed-vector = self.callHackage "fixed-vector" "0.9.0.0" {};
       semigroupoids = pkgs.haskell.lib.dontCheck (self.callHackage "semigroupoids" "5.2" {});
-      linear = pkgs.haskell.lib.dontCheck (self.callHackage "linear" "1.20.6" {});
+      linear = pkgs.haskell.lib.dontHaddock ( pkgs.haskell.lib.dontCheck (self.callHackage "linear" "1.20.6" {}));
       diagrams-lib = pkgs.haskell.lib.dontCheck super.diagrams-lib;
+      plots = pkgs.haskell.lib.dontHaddock super.plots;
     };
   };
 
