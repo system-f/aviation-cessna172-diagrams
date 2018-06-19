@@ -1,6 +1,6 @@
 { mkDerivation, aviation-cessna172-weight-balance, aviation-units
 , aviation-weight-balance, base, colour, diagrams-cairo
-, diagrams-core, diagrams-lib, lens, mtl, plots, stdenv
+, diagrams-core, diagrams-lib, hgeometry, lens, mtl, plots, stdenv
 }:
 mkDerivation {
   pname = "aviation-cessna172-diagrams";
@@ -9,7 +9,7 @@ mkDerivation {
   libraryHaskellDepends = [
     aviation-cessna172-weight-balance aviation-units
     aviation-weight-balance base colour diagrams-cairo diagrams-core
-    diagrams-lib lens mtl plots
+    diagrams-lib hgeometry lens mtl plots
   ];
   homepage = "https://github.com/data61/aviation-cessna172-diagrams";
   description = "Diagrams for the Cessna 172 aircraft in aviation";
