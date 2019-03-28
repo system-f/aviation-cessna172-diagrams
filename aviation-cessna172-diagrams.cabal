@@ -27,18 +27,18 @@ library
                     Haskell2010
 
   build-depends:
-                    base >= 4.8 && < 5
-                    , lens >= 4.15 && < 5
-                    , aviation-units >= 0.0.1 && < 1
-                    , aviation-weight-balance >= 0.0.1 && < 1
-                    , aviation-cessna172-weight-balance >= 0.0.1 && < 1
-                    , diagrams-cairo >= 1.4 && < 2
-                    , diagrams-core >= 1.4 && < 2
-                    , diagrams-lib >= 1.4 && < 2
-                    , mtl >= 2.2 && < 3
-                    , plots >= 0.1 && < 1
-                    , colour >= 2.3 && < 3
-                    , hgeometry == 0.6.0.0
+                    base >= 4.9 && < 4.13
+                    , lens >= 4.15 && < 4.18
+                    , aviation-units >= 0.0.1 && < 0.1
+                    , aviation-weight-balance >= 0.0.1 && < 0.1
+                    , aviation-cessna172-weight-balance >= 0.0.1 && < 0.1
+                    , diagrams-cairo >= 1.4 && < 1.5
+                    , diagrams-core >= 1.4 && < 1.5
+                    , diagrams-lib >= 1.4 && < 1.5
+                    , mtl >= 2.2 && < 2.3
+                    , plots >= 0.1 && < 0.2
+                    , colour >= 2.3 && < 2.4
+                    , hgeometry >= 0.6 && < 0.9
 
   ghc-options:
                     -Wall
