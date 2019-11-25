@@ -4,5 +4,5 @@ Diagrams for the Cessna 172 aircraft in aviation
 
 ----
 
-![Data61 and CSIRO](http://i.imgur.com/0h9dFhl.png)
+![CSIRO's Data61 Logo](https://raw.githubusercontent.com/qfpl/assets/master/data61-transparent-bg.png)
 
