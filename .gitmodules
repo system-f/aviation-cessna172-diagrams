@@ -1,0 +1,9 @@
+[submodule "deps/aviation-units"]
+	path = deps/aviation-units
+	url = ../aviation-units.git
+[submodule "deps/aviation-weight-balance"]
+	path = deps/aviation-weight-balance
+	url = git@github.com:data61/aviation-weight-balance.git
+[submodule "deps/aviation-cessna172-weight-balance"]
+	path = deps/aviation-cessna172-weight-balance
+	url = git@github.com:data61/aviation-cessna172-weight-balance.git

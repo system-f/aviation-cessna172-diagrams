@@ -27,18 +27,16 @@ library
                     Haskell2010
 
   build-depends:
-                    base >= 4.9 && < 4.13
+                    base
                     , lens >= 4.15 && < 4.18
-                    , aviation-units >= 0.0.1 && < 0.1
-                    , aviation-weight-balance >= 0.0.1 && < 0.1
-                    , aviation-cessna172-weight-balance >= 0.0.1 && < 0.1
                     , diagrams-cairo >= 1.4 && < 1.5
                     , diagrams-core >= 1.4 && < 1.5
                     , diagrams-lib >= 1.4 && < 1.5
                     , mtl >= 2.2 && < 2.3
                     , plots >= 0.1 && < 0.2
                     , colour >= 2.3 && < 2.4
-                    , hgeometry >= 0.6 && < 0.9
+                    , hgeometry == 0.10.0.0
+                    , hgeometry-combinatorial == 0.10.0.0
 
   ghc-options:
                     -Wall
@@ -49,6 +47,9 @@ library
 
   hs-source-dirs:
                     src
+                    deps/aviation-units/src
+                    deps/aviation-weight-balance/src
+                    deps/aviation-cessna172-weight-balance/src
 
   exposed-modules:
                     Data.Aviation.C172.Diagrams

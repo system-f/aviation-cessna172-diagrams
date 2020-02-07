@@ -49,7 +49,7 @@ import Data.Foldable(Foldable, toList, mapM_)
 import Data.Function(($))
 import Data.Functor(fmap)
 import Data.Geometry.Boundary(PointLocationResult(Inside, Outside, OnBoundary))
-import Data.Geometry.Point(Point, point2, _point2, xCoord, yCoord)
+import Data.Geometry.Point(Point(Point, toVec), xCoord, yCoord)
 import Data.Geometry.Polygon(SimplePolygon, Polygon, inPolygon, fromPoints, outerBoundary)
 import Data.Maybe(Maybe(Just), maybe)
 import Data.Monoid(Any)
@@ -81,6 +81,20 @@ import Plots.Axis.Render(renderAxis)
 import Prelude(Rational, Double, Int, Fractional((/)), fromRational, (*), (+), (-), show, round, subtract)
 import System.IO(IO)
 import Text.Printf(printf)
+import Data.Geometry.Vector.VectorFamily hiding(snoc)
+
+point2 ::
+  r
+  -> r
+  -> Point 2 r
+point2 x y =
+  Point $ Vector2 x y
+
+_point2 ::
+  Point 2 b
+  -> (b, b)
+_point2 =
+  (\(Vector2 x y) -> (x,y)) . toVec
 
 dejavuSansMono ::
   HasStyle a =>
